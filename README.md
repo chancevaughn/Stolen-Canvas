@@ -12,7 +12,7 @@ Mobile responsive E-commerce website pseudo-selling historical art pieces and li
 
 #### Wireframe
 
-![image-20210510205721593](C:\Users\garre\AppData\Roaming\Typora\typora-user-images\image-20210510205721593.png)
+![img](https://media.discordapp.net/attachments/841466068245545001/841494876959932446/unknown.png?width=400&height=226)
 
 
 
