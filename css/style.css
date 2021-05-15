@@ -13,3 +13,13 @@
     height: 100% !important;
     object-fit: cover !important;
   }
+
+.tan {
+    background-color: #e9ba9a;
+}
+.pad {
+    padding: 10px !important;
+}
+.no-marg {
+    margin: 0 !important;
+}
