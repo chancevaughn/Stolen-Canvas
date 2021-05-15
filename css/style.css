@@ -14,6 +14,16 @@
     object-fit: cover !important;
   }
 
+.footerColor {
+    background-color: #e9ba9a;
+    display: block;
+}
+
+.fontStyle{
+    font-family: 'Open Sans',
+    sans-serif;
+}
+
 .tan {
     background-color: #e9ba9a;
 }
@@ -23,3 +33,4 @@
 .no-marg {
     margin: 0 !important;
 }
+
