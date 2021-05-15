@@ -1,3 +1,4 @@
+const { uniqueId } = require('lodash');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('..');
 
@@ -11,22 +12,29 @@ User.init(
             autoIncrement: true
         },
         email: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            validate: {
+                isEmail: true
+            },
+            unique: true
         }
     },
     {
         password: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            validate: {
+                len: [12]
+            }
         }
     },
     {
         last_Login: {
-            type: DataTypes.STRING
+            type: DataTypes.DATE
         }
     },
     {
         create_Date: {
-            type: DataTypes.STRING
+            type: DataTypes.DATE
         }
     },
     {

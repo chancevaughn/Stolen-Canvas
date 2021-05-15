@@ -9,11 +9,16 @@ Product.Order(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+            default: 10000
         }
     },
     {
         user_id: {
-
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'User',
+                key: 'user_id'
+            }
         }
     },
     {
@@ -23,7 +28,7 @@ Product.Order(
     },
     {
         grand_total: {
-            type: DataTypes.INTEGER
+            type: DataTypes.DECIMAL
         }
     },
     {

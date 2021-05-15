@@ -21,12 +21,16 @@ Product.init(
     },
     {
         value: {
-            type: DataTypes.INTEGER
+            type: DataTypes.DECIMAL
         }
     },
     {
         owner: {
-            type: DataTypes.STRING
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'User',
+                key: 'user_id'
+            }
         }
     },
     {
