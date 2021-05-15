@@ -1,0 +1,15 @@
+.gallery-lg{
+    position: relative !important;
+}
+  
+.gallery-lg:after {
+    content: "" !important;
+    display: block !important;
+    padding-bottom: 100% !important;
+}
+
+.gallery-lg img {
+    position: absolute !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
