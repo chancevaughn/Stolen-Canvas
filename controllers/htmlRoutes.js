@@ -8,12 +8,12 @@ router.get('/gallery', async (req, res) => {
     res.render(`gallery`);//TODO: gallery View Name
 })
 
-router.get('/gallery/:id', async (req, res) => {
-    res.render(`selectedArt`);//TODO: selectedArt View Name
+router.get('/art', async (req, res) => {
+    res.render(`art`);//TODO: selectedArt View Name
 })
 
 router.get('/founders', async (req, res) => {
-    res.render(`founders`);//TODO: founders View Name
+    res.render(`founder's-collection`);//TODO: founders View Name
 })
 
 router.get('/story', async (req, res) => {
@@ -22,7 +22,7 @@ router.get('/story', async (req, res) => {
 
 router.get('/login', async (req, res) => {
     //TODO: redirect to account page if logged in
-    res.render(`homepage`);//TODO: Homepage View Name
+    res.render(`login`);//TODO: Homepage View Name
 })
 
 router.get('/create', async (req, res) => {
@@ -32,7 +32,7 @@ router.get('/create', async (req, res) => {
 
 router.get('/account', async (req, res) => {
     //TODO: redirect to login page if not logged in
-    res.render(`account`);//TODO: account View Name
+    res.render(`createaccount`);//TODO: account View Name
 })
 
 router.get('/cart', async (req, res) => {
