@@ -1,5 +1,5 @@
 const router = require('express').Router();//TODO: Rework file as needed
-const { User } = require('../../models');
+//const { User } = require('../../models'); FIXME: Uncomment
 
 router.post('/', async (req, res) => {
 
