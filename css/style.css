@@ -13,3 +13,13 @@
     height: 100% !important;
     object-fit: cover !important;
   }
+
+.footerColor {
+    background-color: #e9ba9a;
+    display: block;
+}
+
+.fontStyle{
+    font-family: 'Open Sans',
+    sans-serif;
+}
