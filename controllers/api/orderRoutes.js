@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const { Order } = require('../../models'); FIXME: Uncomment
+const { Order } = require('../../models');
 
 router.post('/', async (req, res) => {
     //TODO: Handle adding item to order, check login status before update

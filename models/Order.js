@@ -1,48 +1,43 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('..');
+const sequelize = require('../config/connection');
 
-class Order extends Model {}
+class Order extends Model { }
 
-Product.Order(
+Order.init(
     {
         order_number: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
             default: 10000
-        }
-    },
-    {
+        },
+
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
+                model: 'user',
                 key: 'user_id'
             }
-        }
-    },
-    {
+        },
+
         created_date: {
             type: DataTypes.DATE
-        }
-    },
-    {
+        },
         grand_total: {
             type: DataTypes.DECIMAL
-        }
-    },
-    {
+        },
         paid: {
             type: DataTypes.BOOLEAN
-        }
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Product'
-      }
+        modelName: 'order'
+    }
 );
 
-module.exports = Product;
+module.exports = Order;
