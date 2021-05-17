@@ -15,6 +15,33 @@ router.get('/:id', async (req, res) => {
     })
 })
 
+//const res = await axios.put('https://localhost:3001/api/product/', { hello: 'world' });
+
+
+//changes owner of product
+router.put('/', async (req, res) => {
+    //Check product ids where order number in order items match
+    //update the ownership of all items in order to user_id
+    console.log(req);
+    Product.update(
+        {
+        owner: 1//FIXME: hardcoded value
+        },
+        {
+            where: {
+                product_id: 2//FIXME: hardcoded value
+            }
+        }
+    )
+    .then((updatedProduct) => {
+        res.json(updatedProduct)
+    })
+    .catch((err) => {
+        console.log(err);
+        res.json(err);
+    })
+})
+
 router.post('/', async (req, res) => {
     Product.create(req.body)
     .then((newProduct) => {
