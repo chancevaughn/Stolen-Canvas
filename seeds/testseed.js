@@ -1,4 +1,5 @@
 
+const sequelize = require('../config/connection');
 const { Product } = require('../models');
 const { User } = require('../models');
 
@@ -37,3 +38,12 @@ const productData = [
 ]
 const seedUsers = () => User.bulkCreate(userData);
 const seedProduct = () => Product.bulkCreate(productData);
+
+const seedAll = async () => {
+    await sequelize.sync({force: true});
+    await seedUsers();
+    await seedProduct();
+    process.exit(0);
+}
+
+seedAll();
