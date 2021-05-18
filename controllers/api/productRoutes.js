@@ -18,12 +18,12 @@ router.get('/:id', async (req, res) => {
 
 //const res = await axios.put('https://localhost:3001/api/product/', { hello: 'world' });
 
-const updateProductOwner = (user, items) => {
-    items.map((x) => {
-        {owner: user},
-        {where: {product_id: x }}
-    })
-}
+// const updateProductOwner = (user, items) => {
+//     items.map((x) => {
+//         {owner: user},
+//         {where: {product_id: x }}
+//     })
+// }
 
 //changes owner of product
 router.put('/:userid/:product/', async (req, res) => {

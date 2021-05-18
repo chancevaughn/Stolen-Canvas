@@ -1,29 +1,29 @@
-const order = require('./Order')
-const user = require('./User')
-const product = require('./Product')
+const Order = require('./Order')
+const User = require('./User')
+const Product = require('./Product')
 
-user.hasMany(product, {
+User.hasMany(Product, {
     foreignKey: 'owner'
 });
 
-product.belongsTo(user, {
+Product.belongsTo(User, {
     foreignKey: 'owner'
 });
 
-user.hasMany(order, {
+User.hasMany(Order, {
     foreignKey: 'user_id'
 });
 
-order.belongsTo(user, {
+Order.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-product.belongsToMany(order, {
+Product.belongsToMany(Order, {
     through: 'orderItem'
 });
 
-order.belongsToMany(product, {
+Order.belongsToMany(Product, {
     through: 'orderItem'
 });
 
-module.exports = {order, user, product};
+module.exports = {Order, User, Product};

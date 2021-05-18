@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('..');
+const sequelize = require('../config/connection');
 
-class Product extends Model {}
+class Product extends Model { }
 
 Product.init(
     {
@@ -12,34 +12,34 @@ Product.init(
         },
         title: {
             type: DataTypes.STRING
-        }
-    },
-    {
+
+        },
+
         description: {
             type: DataTypes.STRING
-        }
-    },
-    {
+
+        },
+
         value: {
             type: DataTypes.DECIMAL
-        }
-    },
-    {
+
+        },
+
         owner: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'User',
                 key: 'user_id'
             }
-        }
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Product'
-      }
+        modelName: 'product'
+    }
 );
 
 module.exports = Product;
