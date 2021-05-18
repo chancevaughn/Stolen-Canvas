@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Order extends Model {}
 
-Order(
+Order.init(
     {
         order_number: {
             type: DataTypes.INTEGER,
