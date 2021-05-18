@@ -27,12 +27,12 @@ router.get('/login', async (req, res) => {
 
 router.get('/create', async (req, res) => {
     //TODO: redirect to account page if logged in
-    res.render(`accountCreate`);//TODO: accountCreate View Name
+    res.render(`create-account`);//TODO: accountCreate View Name
 })
 
 router.get('/account', async (req, res) => {
     //TODO: redirect to login page if not logged in
-    res.render(`createaccount`);//TODO: account View Name
+    res.render(`account`);//TODO: account View Name
 })
 
 router.get('/cart', async (req, res) => {
