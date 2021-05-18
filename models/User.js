@@ -1,6 +1,6 @@
 const { uniqueId } = require('lodash');
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('..');
+const sequelize = require('../config/connection');
 
 class User extends Model {}
 
@@ -23,7 +23,7 @@ User.init(
         password: {
             type: DataTypes.STRING,
             validate: {
-                len: [12]
+                len: [8]
             }
         }
     },
@@ -47,7 +47,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User'
+        modelName: 'user'
       }
 );
 
