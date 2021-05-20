@@ -29,124 +29,29 @@
             </table>
         </div>
         <div class="col s9">
+            {{#each products as |product|}}
             <div class="col s4">
                 <div class="card">
                     <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Puddle_Wuttle.png">
+
+                        <img src="{{{ thumbnail }}}">
+
                     </div>
                 </div>
             </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Sad_Times.jpeg">
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Sisyphean.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/No_Front_Flip_Big.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Puddle_Wuttle.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Sad_Times.jpeg">
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Sisyphean.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/No_Front_Flip_Big.png">
-                    </div>
-                </div>
-            </div>
+            {{/each}}
+
         </div>
     </div>
     <div class="row hide-on-med-and-up container">
+        {{#each products as |product|}}
         <div class="col s6">
             <div class="card">
                 <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/Puddle_Wuttle.png">
+                    <img src="{{{ thumbnail }}}">
                 </div>
             </div>
         </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/Sad_Times.jpeg">
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/Images/Sisyphean.png">
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/No_Front_Flip_Big.png">
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/Puddle_Wuttle.png">
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/Sad_Times.jpeg">
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/Sisyphean.png">
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div class="card">
-                <div class="card-image gallery-lg hoverable">
-                    <img src="/Images/No_Front_Flip_Big.png">
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> NW-webpageChanges
