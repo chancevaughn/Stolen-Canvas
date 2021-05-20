@@ -1,11 +1,21 @@
 const router = require(`express`).Router();
+const { Product } = require('../models');
 
 router.get('/', async (req, res) => {
     res.render(`homepage`);//TODO: Homepage View Name
 })
 
 router.get('/gallery', async (req, res) => {
-    res.render(`gallery`);//TODO: gallery View Name
+    const productData = await Product.findAll({
+        attributes: { exclude: ['name, content, value, owner'] }
+    })
+    
+    const products = productData.map((product) => product.get({ plain:true }));
+
+    console.log(products)
+    res.render(`gallery`, {
+        products,
+    });//TODO: gallery View Name
 })
 
 router.get('/art', async (req, res) => {

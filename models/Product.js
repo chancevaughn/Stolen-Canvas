@@ -15,8 +15,16 @@ Product.init(
 
         },
 
-        description: {
+        thumbnail: {
             type: DataTypes.STRING
+        },
+
+        name: {
+            type: DataTypes.STRING
+        },
+
+        content: {
+            type: DataTypes.STRING(3000)
 
         },
 
