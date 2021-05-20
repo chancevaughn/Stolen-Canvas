@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 
 router.get('/gallery', async (req, res) => {
     const productData = await Product.findAll({
-        attributes: { exclude: ['name, content, value, owner'] }
+        attributes: { exclude: ['name, content, founder, owner'] }
     })
     
     const products = productData.map((product) => product.get({ plain:true }));
@@ -23,7 +23,17 @@ router.get('/art', async (req, res) => {
 })
 
 router.get('/founders', async (req, res) => {
-    res.render(`founder's-collection`);//TODO: founders View Name
+    const productData = await Product.findAll({
+        where: { 
+            founder: true
+        }
+    });
+    
+    const products = productData.map((product) => product.get({ plain:true }));
+
+    res.render(`founder's-collection`, {
+        products,
+    });
 })
 
 router.get('/story', async (req, res) => {

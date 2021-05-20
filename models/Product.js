@@ -28,8 +28,8 @@ Product.init(
 
         },
 
-        value: {
-            type: DataTypes.DECIMAL
+        founder: {
+            type: DataTypes.BOOLEAN
 
         },
 
