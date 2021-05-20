@@ -12,42 +12,62 @@
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav class="z-depth-0" id="navbar">
-      <div class="nav-wrapper white">
-        <a href="/">
-          <img href="#" class="responsive-img brand-logo" src="/Images/tempLogo.png" width="150" id="logo"
-            alt="Logo"></img>
-        </a>
-        <a class="dropdown-trigger" href="#" data-target="dropdown1">
-          <i class="material-icons right black-text hide-on-large-only">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="/gallery" class="black-text">Gallery</a></li>
-          <li><a href="/founders" class="black-text">Founder's Collection</a></li>
-          <li><a href="/story" class="black-text">Our Story</a></li>
-          <li><a href="/login" class="black-text">My Account</a></li>
-          <li><a href="/cart" class="black-text">Cart</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
 
-  <ul id="dropdown1" class="dropdown-content right">
-    <li><a href="/gallery" class="black-text">Gallery</a></li>
-    <li><a href="/founders" class="black-text">Founder's Collection</a></li>
-    <li><a href="/story" class="black-text">Our Story</a></li>
-    <li><a href="/login" class="black-text">My Account</a></li>
-    <li><a href="/cart" class="black-text">Cart</a></li>
-  </ul>
-
+  <header>
+    <div class="navbar-fixed">
+      <nav class="z-depth-0" id="navbar">
+        <div class="nav-wrapper white col s12">
+          <i class="large material-icons black-text right hide-on-large-only mobileMenu">search</i>
+          <a href="/">
+            <img href="#" class="responsive-img brand-logo marginText sideMargin size"
+              src="/Images/SC-finalLogo.png" width="320" id="logo" alt="Logo">
+            </img>
+          </a>
+          <a class="dropdown-trigger" href="#" data-target="dropdown1">
+            <i class="large material-icons black-text hide-on-large-only mobileMenu">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/gallery" class="black-text">Gallery</a></li>
+            <li><a href="/founders" class="black-text">Founder's Collection</a></li>
+            <li><a href="/story" class="black-text">Our Story</a></li>
+            <li><a href="/login" class="black-text">My Account</a></li>
+            <li><a href="/cart" class="black-text">Cart</a></li>
+            <li>
+              <div class="input-field col s6 s12 black-text">
+                <i class="black-text material-icons prefix">search</i>
+                <input type="text" placeholder="search for art" id="autocomplete-input" class="autocomplete black-text">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  
+    <ul id="dropdown1" class="dropdown-content right">
+      <li><a href="/gallery" class="black-text marginText">Gallery</a></li>
+      <li><a href="/founders" class="black-text marginText">Founder's Collection</a></li>
+      <li><a href="/story" class="black-text marginText">Our Story</a></li>
+      <li><a href="/login" class="black-text marginText">My Account</a></li>
+      <li><a href="/cart" class="black-text marginText">Cart</a></li>
+    </ul>
+  </header>
   {{{body}}}
+  <footer class="page-footer footerColor">
 
-  <footer class="footerColor">
     <div class="footer-copyright">
-      <div class="container center-align fontStyle">&copy; 2021 Stolen Canvas</div>
+      <div class="container right fontStyle">
+        <div class="right marginRight">
+          <p class="grey-text text-lighten-4">a good artist creates their own work, a great artist steals
+            it. - Jared</p>
+        </div>
+        <a href="homepage.html">
+          <img href="#" class="sideMargin marginLogo" src="../assests/Images/AltLogo.jpg" width="30" id="logo" alt="Logo">
+          </img>
+        </a>&copy; 2021 Stolen Canvas
+      </div>
     </div>
   </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/js/script.js"></script>
 </body>

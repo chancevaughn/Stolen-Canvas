@@ -1,3 +1,14 @@
+h3 {
+    font-weight: 600 !important;
+    font-family: 'Quicksand',
+    sans-serif !important;
+}
+p {
+    font-family: 'Quicksand',
+    sans-serif !important;
+    z-index: 1;
+}
+
 .gallery-lg{
     position: relative !important;
 }
@@ -40,4 +51,61 @@
 
 .center-text {
     text-align: center !important;
+}
+
+.logoStyle {
+    margin-bottom: 20px;
+}
+
+.topMargin {
+    margin-top: 20px !important;
+}
+
+.marginText {
+    margin-top: 10px !important;
+}
+
+.marginLogo {
+    margin-top: 5px !important;
+}
+
+.sideMargin {
+    margin-left: 10px;
+}
+
+.marginRight {
+    margin-right: 70px !important;
+    margin-left: 10px !important;
+}
+
+nav {
+    background-color: white !important
+}
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #e9ba9a !important;
+    box-shadow: 0 1px 0 0 #e9ba9a !important;
+}
+
+@media screen and (max-width: 600px) {
+    .topMargin {
+        margin-top: 40px !important;
+    }
+}
+
+.mobileMenu {
+    font-size: 60px !important;
+    line-height: 80px !important;
+    margin: 0px 5px 0px 5px  !important;
+}
+
+@media screen and (max-width: 475px) {
+    .size {
+        max-width: 220px !important;
+    }
+    .marginText {
+        margin-top: 20px !important;
+    }
+    .sideMargin {
+        margin-left: 0px !important;
+    }
 }
