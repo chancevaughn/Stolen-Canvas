@@ -3,25 +3,29 @@
         "title": "Puddle Wuttle",
         "thumbnail": "https://i.imgur.com/tBbjqgg.png",
         "name": "Crow Sauce",
-        "content": "bird look at reflection. it wonder  meaning of life. why tax."
+        "content": "bird look at reflection. it wonder  meaning of life. why tax.",
+        "founder": true
     },
     {
         "title": "No Front Flip",
         "thumbnail": "https://i.imgur.com/dllqnY8.png",
         "name": "Stranded Helix",
-        "content": "A common misconception about newer planes is that there is a wheel in the back."
+        "content": "A common misconception about newer planes is that there is a wheel in the back.",
+        "founder": true
     },
     {
         "title": "Sad Times",
         "thumbnail": "https://i.imgur.com/CSoZQFb.jpg",
         "name": "Mythz",
-        "content": ">be a frog >be green >be alive >Sad times for a green frog"
+        "content": ">be a frog >be green >be alive >Sad times for a green frog",
+        "founder": true
     },
     {
         "title": "Sisyphean",
         "thumbnail": "https://i.imgur.com/QlPc7yN.jpg",
         "name": "Chance Vaughn",
-        "content": "Chasing Perfection."
+        "content": "Chasing Perfection.",
+        "founder": true
     },
     {
         "title": "The Headless Horseman Pursuing Ichabod Crane",
