@@ -26,14 +26,12 @@ router.post('/search', async (req, res) => {
             if (req.session.searchHistory) {
                 req.session.save(() => {
                     req.session.searchHistory.push(req.body.input);
-                    console.log(`helloTEST ${req.session.searchHistory}`);
                     res.status(200).redirect(`/art/${singleProduct.product_id}`)
                 })
             }
             else {
                 req.session.save(() => {
                     req.session.searchHistory = [req.body.input];
-                    console.log(`helloTEST ${req.session.searchHistory}`);
                     res.status(200).redirect(`/art/${singleProduct.product_id}`)
                 })
             }
