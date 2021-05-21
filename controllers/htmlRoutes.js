@@ -1,5 +1,6 @@
 const router = require(`express`).Router();
-const { Product } = require('../models');
+const { Product, User } = require('../models');
+
 
 router.get('/', async (req, res) => {
     res.render(`homepage`);//TODO: Homepage View Name
@@ -9,9 +10,10 @@ router.get('/gallery', async (req, res) => {
     const productData = await Product.findAll({
         attributes: { exclude: ['name, content, founder, owner'] }
     })
-    
-    const products = productData.map((product) => product.get({ plain:true }));
-
+    const products = productData.map((product) => product.get({ plain: true }));
+    if(req.session.searchHistory){
+        res.render('gallery', {products, searchHistory: req.sessions.searchHistory})
+    }
     console.log(products)
     res.render(`gallery`, {
         products,
@@ -24,17 +26,17 @@ router.get('/art/:id', async (req, res) => {
             product_id: req.params.id
         }
     })
-    res.render(`art`, artData.get({plain: true}));
+    res.render(`art`, artData.get({ plain: true }));
 })
 
 router.get('/founders', async (req, res) => {
     const productData = await Product.findAll({
-        where: { 
+        where: {
             founder: true
         }
     });
-    
-    const products = productData.map((product) => product.get({ plain:true }));
+
+    const products = productData.map((product) => product.get({ plain: true }));
 
     res.render(`founder's-collection`, {
         products,
@@ -46,28 +48,38 @@ router.get('/story', async (req, res) => {
 })
 
 router.get('/login', async (req, res) => {
-    if(req.session.logged_in){
+    if (req.session.logged_in) {
         res.redirect('/account');
     }
     res.render(`login`);
 })
 
 router.get('/create', async (req, res) => {
-    if(req.session.logged_in){
+    if (req.session.logged_in) {
         res.redirect('/account')
     }
     res.render(`create-account`);
 })
 
 router.get('/account', async (req, res) => {
-    if(!req.session.logged_in){
+    if (!req.session.logged_in) {
+
         res.redirect('/login')
     }
-    res.render(`account`);
+    else {
+        const userData = await User.findOne({
+            where: {
+                user_id : req.session.user_id
+            },
+
+            attributes: { exclude: ['password, create_date, last_login'] }
+        })
+        res.render(`account`, userData.get({plain: true}));
+    }
 })
 
 router.get('/cart', async (req, res) => {
-    if(!req.session.logged_in){
+    if (!req.session.logged_in) {
         res.redirect('/login')
     }
     res.render(`cart`);

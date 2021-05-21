@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Order extends Model { }
@@ -23,7 +23,8 @@ Order.init(
         },
 
         created_date: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+            defaultValue: Sequelize.NOW
 
         },
 
