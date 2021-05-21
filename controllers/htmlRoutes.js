@@ -31,6 +31,7 @@ router.get('/art/:id', async (req, res) => {
     })
 
     res.render(`art`, artData.get({ plain: true }));
+});
 
 
 router.get('/founders', async (req, res) => {
@@ -93,4 +94,4 @@ router.get('/cart', async (req, res) => {
     res.render(`cart`);
 })
 
-module.exports = router;
+module.exports = router
