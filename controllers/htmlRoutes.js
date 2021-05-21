@@ -15,11 +15,16 @@ router.get('/gallery', async (req, res) => {
     console.log(products)
     res.render(`gallery`, {
         products,
-    });//TODO: gallery View Name
+    });
 })
 
-router.get('/art', async (req, res) => {
-    res.render(`art`);//TODO: selectedArt View Name
+router.get('/art/:id', async (req, res) => {
+    const artData = await Product.findOne({
+        where: {
+            product_id: req.params.id
+        }
+    })
+    res.render(`art`, artData.get({plain: true}));
 })
 
 router.get('/founders', async (req, res) => {
