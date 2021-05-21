@@ -17,4 +17,6 @@ const cartAddHandler = async () => {
     }
 }
 
-cartButton.addEventListener("click", cartAddHandler); 
+
+cartButton.addEventListener("click", cartAddHandler);
+

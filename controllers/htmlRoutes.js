@@ -1,6 +1,7 @@
 const router = require(`express`).Router();
 const { Product, User } = require('../models');
 
+
 router.get('/', async (req, res) => {
     res.render(`homepage`);//TODO: Homepage View Name
 })
@@ -28,8 +29,9 @@ router.get('/art/:id', async (req, res) => {
             product_id: req.params.id
         }
     })
-    res.render('art', artData.get({plain: true}));
-});
+
+    res.render(`art`, artData.get({ plain: true }));
+
 
 router.get('/founders', async (req, res) => {
     const productData = await Product.findAll({
@@ -65,17 +67,22 @@ router.get('/create', async (req, res) => {
 
 router.get('/account', async (req, res) => {
     if (!req.session.logged_in) {
+
+
         res.redirect('/login')
     }
-    else{
+    else {
         const userData = await User.findOne({
             where: {
-                user_id : req.session.user_id
+                user_id: req.session.user_id
+
             },
 
             attributes: { exclude: ['password, create_date, last_login'] }
         })
-        res.render(`account`, userData.get({plain: true}));
+
+        res.render(`account`, userData.get({ plain: true }));
+
     }
 })
 

@@ -1,29 +1,48 @@
 const router = require('express').Router();
-const { Product } = require('../../models');
+const { Product, Order, OrderItem } = require('../../models');
 
 //gets all products from db
 router.get('/', async (req, res) => {
     Product.findAll()
-    .then((products) => {
-        res.json(products);
-    })
+        .then((products) => {
+            res.json(products);
+        })
 })
 //gets product by id
 router.get('/:id', async (req, res) => {
     Product.findByPk(req.params.id)
-    .then((singleProduct) => {
-        res.json(singleProduct);
-    })
+        .then((singleProduct) => {
+            res.json(singleProduct);
+        })
 })
 
-//const res = await axios.put('https://localhost:3001/api/product/', { hello: 'world' });
+router.post('/search', async (req, res) => {
+    Product.findOne({
+        where: {
+            title: req.body.input
+        }
+    })
+        .then((singleProduct) => {
+            if (req.session.searchHistory) {
+                req.session.save(() => {
+                    req.session.searchHistory.push(req.body.input);
+                    res.status(200).redirect(`/art/${singleProduct.product_id}`)
+                })
+            }
+            else {
+                req.session.save(() => {
+                    req.session.searchHistory = [req.body.input];
+                    res.status(200).redirect(`/art/${singleProduct.product_id}`)
+                })
+            }
+            
+            
+        })
+        .catch((err) => {
+            res.status(400).json(err);
+        })
 
-// const updateProductOwner = (user, items) => {
-//     items.map((x) => {
-//         {owner: user},
-//         {where: {product_id: x }}
-//     })
-// }
+})
 
 //changes owner of product
 router.put('/:userid/:product/', async (req, res) => {
@@ -32,7 +51,7 @@ router.put('/:userid/:product/', async (req, res) => {
     console.log(req);
     Product.update(
         {
-        owner: 1//FIXME: hardcoded value
+            owner: 1//FIXME: hardcoded value
         },
         {
             where: {
@@ -40,14 +59,54 @@ router.put('/:userid/:product/', async (req, res) => {
             }
         }
     )
-    .then((updatedProduct) => {
-        res.json(updatedProduct)
-    })
-    .catch((err) => {
-        console.log(err);
-        res.json(err);
-    })
+        .then((updatedProduct) => {
+            res.json(updatedProduct)
+        })
+        .catch((err) => {
+            console.log(err);
+            res.json(err);
+        })
 })
+//Fix if time, sequelize doesn't use models on Many-to-Many
+// router.post('/add', async (req, res) => {
+//     if (req.session.logged_in){
+//         console.log(req.body);
+//         Order.findOne({
+//             where: {
+//                 user_id: req.session.user_id,
+//                 paid: false//FIXME: change to closed
+//             }
+//         })
+//             .then(selectedOrder => {
+//                 console.log(selectedOrder);
+//                 if(selectedOrder){
+//                     OrderItem.create({
+//                         order_order_Number: selectedOrder.order_number,
+//                         product_product_Id: parseInt(req.body.productID)
+//                     })
+//                 }
+//                 else {
+//                     Order.create({
+//                         user_id: req.session.user_id,
+//                         paid: false
+//                     })
+//                     .then(newOrder => {
+//                         OrderItem.create({
+//                             order_order_number: newOrder.order_number,
+//                             product_product_Id: parseInt(req.body.productID)
+//                         })
+//                     })
+
+
+//                 }
+
+//             })
+//             .catch((err) => console.log(err))
+//         }
+//     else {
+//         res.status(403).redirect('/login');
+//     }
+
 
 router.post('/search', async (req, res) => {
     Product.findOne({
@@ -85,5 +144,7 @@ router.post('/search', async (req, res) => {
             })
     
     })
+
+
 
 module.exports = router;
