@@ -107,6 +107,44 @@ router.put('/:userid/:product/', async (req, res) => {
 //         res.status(403).redirect('/login');
 //     }
 
-// });
+
+router.post('/search', async (req, res) => {
+    Product.findOne({
+        where: {
+                title: req.body.input
+            }
+        })
+        .then((singleProduct) => {
+            res.status(200).redirect(`/art/${singleProduct.product_id}`)
+        })
+        .catch((err) => {
+            res.status(400).json(err);
+        })
+    
+            .then((singleProduct) => {
+                if (req.session.searchHistory) {
+                    req.session.save(() => {
+                        req.session.searchHistory.push(req.body.input);
+                        console.log(`helloTEST ${req.session.searchHistory}`);
+                        res.status(200).redirect(`/art/${singleProduct.product_id}`)
+                    })
+                }
+                else {
+                    req.session.save(() => {
+                        req.session.searchHistory = [req.body.input];
+                        console.log(`helloTEST ${req.session.searchHistory}`);
+                        res.status(200).redirect(`/art/${singleProduct.product_id}`)
+                    })
+                }
+    
+    
+            })
+            .catch((err) => {
+                res.status(400).json(err);
+            })
+    
+    })
+
+
 
 module.exports = router;
