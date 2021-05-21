@@ -6,18 +6,21 @@
             </div>
         </div>
     </div>
-    <div class="input-field col s8 push-s2">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
-        <span class="helper-text" data-error="Please enter a valid email address." data-success="right"></span>
-    </div>
-    <div class="input-field col s8 push-s2">
-        <input id="password" type="password" class="validate">
-        <label for="password">Password</label>
-    </div>
-    <div class="col s12">
-        <button class="btn waves-effect waves-light col s2 push-s5 tan black-text" type="submit"
-            name="action">Login</button>
-        <a href="acount.html" class="col s2 push-s5 black-text">Create Account</a>
-    </div>
+    <form id="loginForm">
+        <div class="input-field col s8 push-s2">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="Please enter a valid email address." data-success="right"></span>
+        </div>
+        <div class="input-field col s8 push-s2">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+        </div>
+        <div class="col s12">
+            <button class="btn waves-effect waves-light col s2 push-s5 tan black-text" type="submit"
+                >Login</button>
+            <a href="create" class="col s2 push-s5 black-text">Create Account</a>
+        </div>
+    </form>
 </div>
+<script src="/js/login.js"></script>
