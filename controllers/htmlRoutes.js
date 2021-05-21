@@ -3,7 +3,7 @@ const { Product, User } = require('../models');
 
 
 router.get('/', async (req, res) => {
-    res.render(`homepage`);//TODO: Homepage View Name
+    res.render(`homepage`);
 })
 
 router.get('/gallery', async (req, res) => {
@@ -56,14 +56,18 @@ router.get('/login', async (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/account');
     }
+    else{
     res.render(`login`);
+    }
 })
 
 router.get('/create', async (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/account')
     }
+    else{
     res.render(`create-account`);
+    }
 })
 
 router.get('/account', async (req, res) => {
