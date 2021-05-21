@@ -37,26 +37,35 @@ router.get('/founders', async (req, res) => {
 })
 
 router.get('/story', async (req, res) => {
-    res.render(`story`);//TODO: story View Name
+    res.render(`story`);
 })
 
 router.get('/login', async (req, res) => {
-    //TODO: redirect to account page if logged in
-    res.render(`login`);//TODO: Homepage View Name
+    if(req.session.logged_in){
+        res.redirect('/account');
+    }
+    res.render(`login`);
 })
 
 router.get('/create', async (req, res) => {
-    //TODO: redirect to account page if logged in
-    res.render(`create-account`);//TODO: accountCreate View Name
+    if(req.session.logged_in){
+        res.redirect('/account')
+    }
+    res.render(`create-account`);
 })
 
 router.get('/account', async (req, res) => {
-    //TODO: redirect to login page if not logged in
-    res.render(`account`);//TODO: account View Name
+    if(!req.session.logged_in){
+        res.redirect('/login')
+    }
+    res.render(`account`);
 })
 
 router.get('/cart', async (req, res) => {
-    res.render(`cart`);//TODO: cart View Name
+    if(!req.session.logged_in){
+        res.redirect('/login')
+    }
+    res.render(`cart`);
 })
 
 module.exports = router;

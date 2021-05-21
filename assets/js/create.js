@@ -1,9 +1,8 @@
 const accountForm = document.querySelector('#createAccountForm');
 
-const loginFormHandler = async (event) => {
+const createAccountFormHandler = async (event) => {
 
     event.preventDefault();
-    console.log("button-clicked");
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
     const passwordConfirm = document.querySelector('#password-confirm').value.trim();
@@ -17,7 +16,7 @@ const loginFormHandler = async (event) => {
             });
 
             if (response.ok) {
-                document.location.replace('/account');
+                document.location.replace('/login');
             } else {
                 alert('Failed to create account');
             }
@@ -25,8 +24,8 @@ const loginFormHandler = async (event) => {
     }
     else {
         console.log("passwords do not match");
-        Window.alert("passwords do not match");
+        alert("passwords do not match");
     }
 };
 
-accountForm.addEventListener("submit", loginFormHandler);
+accountForm.addEventListener("submit", createAccountFormHandler);
