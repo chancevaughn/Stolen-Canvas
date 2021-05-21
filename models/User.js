@@ -1,8 +1,13 @@
 const { uniqueId } = require('lodash');
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model { }
+class User extends Model {
+    checkPassword(loginPassword) {
+        return bcrypt.compareSync(loginPassword, this.password);
+    }
+ }
 
 User.init(
     {
@@ -34,15 +39,25 @@ User.init(
         },
 
         create_Date: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+            defaultValue: Sequelize.NOW
 
         },
 
         balance: {
-            type: DataTypes.DECIMAL
+            type: DataTypes.DECIMAL,
+            defaultValue: 600000.00
         },
     },
     {
+        hooks: {
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                console.log('bcrypt worked');
+                return newUserData;
+            },
+
+        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
