@@ -16,14 +16,20 @@ router.get('/:id', async (req, res) => {
     })
 })
 
-//const res = await axios.put('https://localhost:3001/api/product/', { hello: 'world' });
-
-// const updateProductOwner = (user, items) => {
-//     items.map((x) => {
-//         {owner: user},
-//         {where: {product_id: x }}
-//     })
-// }
+router.post('/search', async (req, res) => {
+    Product.findOne({
+        where: {
+            title: req.body.input
+        }
+    })
+    .then((singleProduct) => {
+        res.status(200).redirect(`/art/${singleProduct.product_id}`)
+    })
+    .catch((err) => {
+        res.status(400).json(err);
+    })
+    
+})
 
 //changes owner of product
 router.put('/:userid/:product/', async (req, res) => {

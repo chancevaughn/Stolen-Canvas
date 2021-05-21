@@ -19,8 +19,8 @@
         <div class="nav-wrapper white col s12">
           <i class="large material-icons black-text right hide-on-large-only mobileMenu">search</i>
           <a href="/">
-            <img href="#" class="responsive-img brand-logo marginText sideMargin size"
-              src="/Images/SC-finalLogo.png" width="320" id="logo" alt="Logo">
+            <img href="#" class="responsive-img brand-logo marginText sideMargin size" src="/Images/SC-finalLogo.png"
+              width="320" id="logo" alt="Logo">
             </img>
           </a>
           <a class="dropdown-trigger" href="#" data-target="dropdown1">
@@ -33,16 +33,19 @@
             <li><a href="/login" class="black-text">My Account</a></li>
             <li><a href="/cart" class="black-text">Cart</a></li>
             <li>
-              <div class="input-field col s6 s12 black-text">
-                <i class="black-text material-icons prefix">search</i>
-                <input type="text" placeholder="search for art" id="autocomplete-input" class="autocomplete black-text">
-              </div>
+              <form id="searchBar">
+                <div class="input-field col s6 s12 black-text">
+                  <i class="black-text material-icons prefix">search</i>
+                  <input type="text" placeholder="search for art" id="autocomplete-input"
+                    class="autocomplete black-text">
+                </div>
+              </form>
             </li>
           </ul>
         </div>
       </nav>
     </div>
-  
+
     <ul id="dropdown1" class="dropdown-content right">
       <li><a href="/gallery" class="black-text marginText">Gallery</a></li>
       <li><a href="/founders" class="black-text marginText">Founder's Collection</a></li>
@@ -70,6 +73,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/js/script.js"></script>
+  <script src="/js/search.js"></script>
 </body>
 
 </html>
