@@ -16,7 +16,6 @@ const searchBarHandler = async (event) => {
             });
             console.log(response);
             if (response.ok) {
-                
                 document.location.replace(response.url);
             } else {
                 alert('Search returned no result');
