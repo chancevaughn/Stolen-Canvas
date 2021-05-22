@@ -71,12 +71,13 @@ router.get('/create', async (req, res) => {
 })
 
 router.get('/account', async (req, res) => {
-    if (!req.session.logged_in && !req.session.user_id) {
+    if (!req.session.logged_in || !req.session.user_id) {
 
 
         res.redirect('/login')
     }
     else {
+        try{
         const userData = await User.findOne({
             where: {
                 user_id: req.session.user_id
@@ -87,7 +88,13 @@ router.get('/account', async (req, res) => {
         })
 
         res.render(`account`, userData.get({ plain: true }));
-
+    }
+    catch {
+        req.session.destroy(() => {
+            res.status(403).render('/login')
+        })
+        
+    }
     }
 })
 
