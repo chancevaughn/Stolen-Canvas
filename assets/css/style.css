@@ -38,6 +38,11 @@ p {
 .tan {
     background-color: #e9ba9a;
 }
+
+.accountBorder {
+    outline-style: solid;
+    outline-color: #595959;
+}
 .pad {
     padding: 10px !important;
 }
