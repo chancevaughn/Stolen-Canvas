@@ -78,7 +78,7 @@ router.get('/account', async (req, res) => {
     }
     else {
         try {
-            const userData = await User.findOne({
+            const dbUserData = await User.findOne({
                 where: {
                     user_id: req.session.user_id
 
@@ -88,11 +88,12 @@ router.get('/account', async (req, res) => {
             })
             const dbCollection = await Product.findAll({
                 where: {
-                    owner: userData.user_id
+                    owner: req.session.user_id
                 }
             })
             const collection = dbCollection.map((art) => art.get({plain: true}));
-            res.render(`account`, {userData: userData.get({ plain: true }), collection});
+            const userData = dbUserData.get({plain: true})
+            res.render(`account`, {userData, collection});
         }
         catch {
             req.session.destroy(() => {
