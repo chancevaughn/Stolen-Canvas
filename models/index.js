@@ -11,6 +11,14 @@ Product.belongsTo(User, {
     foreignKey: 'owner'
 });
 
+User.hasMany(Product, {
+    foreignKey: 'incart'
+});
+
+Product.belongsTo(User, {
+    foreignKey: 'incart'
+});
+
 User.hasMany(Order, {
     foreignKey: 'user_id'
 });

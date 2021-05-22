@@ -4,147 +4,171 @@
         "thumbnail": "https://i.imgur.com/tBbjqgg.png",
         "name": "Crow Sauce",
         "content": "bird look at reflection. it wonder  meaning of life. why tax.",
-        "founder": true
+        "founder": true,
+        "value" : 150000
     },
     {
         "title": "No Front Flip",
         "thumbnail": "https://i.imgur.com/dllqnY8.png",
         "name": "Stranded Helix",
         "content": "A common misconception about newer planes is that there is a wheel in the back.",
-        "founder": true
+        "founder": true,
+        "value" : 150000
     },
     {
         "title": "Sad Times",
         "thumbnail": "https://i.imgur.com/CSoZQFb.jpg",
         "name": "Mythz",
         "content": ">be a frog >be green >be alive >Sad times for a green frog",
-        "founder": true
+        "founder": true,
+        "value" : 150000
     },
     {
         "title": "Sisyphean",
         "thumbnail": "https://i.imgur.com/QlPc7yN.jpg",
         "name": "Chance Vaughn",
         "content": "Chasing Perfection.",
-        "founder": true
+        "founder": true,
+        "value" : 150000
     },
     {
         "title": "The Headless Horseman Pursuing Ichabod Crane",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?id=SAAM-1994.120_1",
         "name": "Quidor, John",
-        "content": "Washington Irving's \"The Legend of Sleepy Hollow\" inspired Quidor to paint the climactic moment from this famous tale. Ichabod Crane is a prickly and stuck-up schoolmaster and a bumbling suitor for the lovely Katrina, who uses him to make her beau jealous. The pompous twit is no match for the clever locals, and he disappears, chased away by the headless horseman through a darkened wood. Irving's educated nitwit, strapping local boy and flirtatious beauty would reappear as folk characters throughout American literature in the nineteenth century.Exhibition Label, Smithsonian American Art Museum, 2006"
+        "content": "Washington Irving's \"The Legend of Sleepy Hollow\" inspired Quidor to paint the climactic moment from this famous tale. Ichabod Crane is a prickly and stuck-up schoolmaster and a bumbling suitor for the lovely Katrina, who uses him to make her beau jealous. The pompous twit is no match for the clever locals, and he disappears, chased away by the headless horseman through a darkened wood. Irving's educated nitwit, strapping local boy and flirtatious beauty would reappear as folk characters throughout American literature in the nineteenth century.Exhibition Label, Smithsonian American Art Museum, 2006",
+        "value" : 90000
     },
     {
         "title": "The South Ledges, Appledore",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?id=SAAM-1929.6.62_2",
         "name": "Hassam, Childe",
-        "content": "Hassam spent many summers on Appledore Island off the coast of Maine. Every year, he and a circle of musicians, writers and other artists made an informal colony based at the home of his friend, the poet Celia Thaxter. In Thaxter's gardens and on the rocky beaches, Hassam used the flickering brushwork and brilliant colors he had adopted in France to capture the spangled light of Appledore's brief summer. This painting evokes the leisurely, seasonal rhythms of America's priveleged families in the last years before the Great War. A beautifully dressed woman shields her face from the sun; she looks down and away, as if absorbed in the song of a sandpiper, the island bird that inspired Celia Thaxter's most famous children's poem."
+        "content": "Hassam spent many summers on Appledore Island off the coast of Maine. Every year, he and a circle of musicians, writers and other artists made an informal colony based at the home of his friend, the poet Celia Thaxter. In Thaxter's gardens and on the rocky beaches, Hassam used the flickering brushwork and brilliant colors he had adopted in France to capture the spangled light of Appledore's brief summer. This painting evokes the leisurely, seasonal rhythms of America's priveleged families in the last years before the Great War. A beautifully dressed woman shields her face from the sun; she looks down and away, as if absorbed in the song of a sandpiper, the island bird that inspired Celia Thaxter's most famous children's poem.",
+        "value" : 97000
     },
     {
         "title": "Stream, Early Spring",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?id=SAAM-1994.91.38_1",
         "name": "Chislett, John",
-        "content": "Stream, Early Spring"
+        "content": "Stream, Early Spring",
+        "value" : 133000
     },
     {
         "title": "Lost Font",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-2011-33-4MattFlynn",
         "name": "Seth Tillett, Nicole Rauscher",
-        "content": "Irregular runs of black dots surrounded by mottled gray on a white ground."
+        "content": "Irregular runs of black dots surrounded by mottled gray on a white ground.",
+        "value" : 122000
     },
     {
         "title": "Up the Hudson",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1964.19.6_1",
         "name": "Frank C. Kirk",
-        "content": "Up the Hudson"
+        "content": "Up the Hudson",
+        "value" : 144000
     },
     {
         "title": "Cape Cod Morning",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1986.6.92_3",
         "name": "Edward Hopper",
-        "content": "In Cape Cod Morning, a woman looks out a bay window, riveted by something beyond the pictorial space. She is framed by tall, dark shutters and the shaded façade of the oriel window. The brilliant sunlight on the side of the house contrasts with the blue sky, trees, and golden grass that fill the right half of the canvas. The painting tells no story; instead, the woman’s tense pose creates a sense of anxious anticipation, and the bifurcated image implies a dichotomy between her interior space and the world beyond."
+        "content": "In Cape Cod Morning, a woman looks out a bay window, riveted by something beyond the pictorial space. She is framed by tall, dark shutters and the shaded façade of the oriel window. The brilliant sunlight on the side of the house contrasts with the blue sky, trees, and golden grass that fill the right half of the canvas. The painting tells no story; instead, the woman’s tense pose creates a sense of anxious anticipation, and the bifurcated image implies a dichotomy between her interior space and the world beyond.",
+        "value" : 150000
     },
     {
         "title": "Manhattan",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1968.9.19_1",
         "name": "Werner Drewes",
-        "content": "Manhattan"
+        "content": "Manhattan",
+        "value" : 118000
     },
     {
         "title": "Study for Maximum Mass Permitted by the 1916 New York Zoning Law, Stage 4",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-1969-137-4KenPelka",
         "name": "Hugh Ferriss",
-        "content": "Rendering of very dark, monumental high-rise building consisting of tall set back central tower, flanked by two smaller towers, each with set back upper stories. Dramatic 'fan' of light rays in background. This is an early proposal for the set back skyscraper form that was to characterize many skyscrapers built from the mid-1920s to the ca.1950s."
+        "content": "Rendering of very dark, monumental high-rise building consisting of tall set back central tower, flanked by two smaller towers, each with set back upper stories. Dramatic 'fan' of light rays in background. This is an early proposal for the set back skyscraper form that was to characterize many skyscrapers built from the mid-1920s to the ca.1950s.",
+        "value" : 94000
     },
     {
         "title": "Nature Mort",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-D181042FA4922-000001",
         "name": "Georges Aubert",
-        "content": "Vertical rectangle. Cubistic composition sohwing a banjo and other objects on a table. Number 24 of a limited edition of 99, hand-printed by George Lockwood from the original woodblock designed by Picasso and cut by Georges Aubert for the publisher Ambroise Vollard."
+        "content": "Vertical rectangle. Cubistic composition sohwing a banjo and other objects on a table. Number 24 of a limited edition of 99, hand-printed by George Lockwood from the original woodblock designed by Picasso and cut by Georges Aubert for the publisher Ambroise Vollard.",
+        "value" : 127000
     },
     {
         "title": "Gertrude Stein and Alice B. Toklas",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=NPG-NPG_88_161SteinandTokiasM-000002",
         "name": "Sir Francis Cyril Rose",
-        "content": "Francis Rose painted Stein and Toklas in their new space, using the iconography of a happy family. Toklas works on a tapestry frame, perhaps on a design by Picasso or Rose himself; Stein writes at her desk; and their dog Pépé snoozes on the horsehair couch. Paintings by Picasso hang in, around, and sometimes on top of the decorative plaster relief work on the walls."
+        "content": "Francis Rose painted Stein and Toklas in their new space, using the iconography of a happy family. Toklas works on a tapestry frame, perhaps on a design by Picasso or Rose himself; Stein writes at her desk; and their dog Pépé snoozes on the horsehair couch. Paintings by Picasso hang in, around, and sometimes on top of the decorative plaster relief work on the walls.",
+        "value" : 134000
     },
     {
         "title": "Pocahontas",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1985.66.317435_1",
         "name": "Antonion Zeno Shindler",
-        "content": "Pocahontas"
+        "content": "Pocahontas",
+        "value" : 123000
     },
     {
         "title": "The Grand Canyon of the Yellowstone",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1928.7.1_2",
         "name": "Thomas Moran",
-        "content": "The Grand Canyon of the Yellowstone"
+        "content": "The Grand Canyon of the Yellowstone",
+        "value" : 109000
     },
     {
         "title": "St. Mark and St. Luke; Right cover of The Washington Manuscript of the Gospels",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=FS-7025_05",
         "name": "Ali Arabi",
-        "content": "Gift of Charles Lang Freer"
+        "content": "Gift of Charles Lang Freer",
+        "value" : 111000
     },
     {
         "title": "Air Things",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1991.146_1",
         "name": "Suzanne Klotz",
-        "content": "Gift of the Ruhe Family in memory of Edward L. Ruhe"
+        "content": "Gift of the Ruhe Family in memory of Edward L. Ruhe",
+        "value" : 150000
     },
     {
         "title": "Front Line Stuff",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1981.163.11_1",
         "name": "Claggett Wilson,",
-        "content": "Gift of Alice H. Rossin"
+        "content": "Gift of Alice H. Rossin",
+        "value" : 137000
     },
     {
         "title": "Shell-Hole Stuff--Chemin des Dames",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1981.163.2_1",
         "name": "Claggett Wilson",
-        "content": "Gift of Alice H. Rossin"
+        "content": "Gift of Alice H. Rossin",
+        "value" : 148000
     },
     {
         "title": "Self-Portrait ('We are Such Stuff as Dreams are Made on')",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=https://hirshhorn.si.edu/dynamic/collection_images/full/66.1857.jpg",
         "name": "Philip Evergood",
-        "content": "Gift of Joseph H. Hirshhorn"
+        "content": "Gift of Joseph H. Hirshhorn",
+        "value" : 142000
     },
     {
         "title": "Non-on-dá-gon, a Chief",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1985.66.276_1",
         "name": "George Catlin",
-        "content": "George Catlin probably took portraits of Delaware/Lenape chiefs Non-on-dá-gon and the Answer (see 1985.66.275) at Fort Leavenworth (in today’s Kansas) in 1830. Catlin wrote at length of these images: “Non-on-dá-gon, with a silver ring in his nose, is another of the chiefs of distinction, whose history I admired very much . . . In both of these . . . [portraits] their dresses were principally of stuffs of civilized manufacture; and their heads were bound with vari-coloured handkerchiefs or shawls, which were tastefully put on like a Turkish turban.” (Catlin, Letters and Notes, vol. 2, no. 47, 1841; reprint 1973)"
+        "content": "George Catlin probably took portraits of Delaware/Lenape chiefs Non-on-dá-gon and the Answer (see 1985.66.275) at Fort Leavenworth (in today’s Kansas) in 1830. Catlin wrote at length of these images: “Non-on-dá-gon, with a silver ring in his nose, is another of the chiefs of distinction, whose history I admired very much . . . In both of these . . . [portraits] their dresses were principally of stuffs of civilized manufacture; and their heads were bound with vari-coloured handkerchiefs or shawls, which were tastefully put on like a Turkish turban.” (Catlin, Letters and Notes, vol. 2, no. 47, 1841; reprint 1973)",
+        "value" : 90000
     },
     {
         "title": "Lost Lover",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=https://hirshhorn.si.edu/dynamic/collection_images/full/86.3559.jpg",
         "name": "Annie Mae Payne",
-        "content": "Hirshhorn Museum and Sculpture Garden, Smithsonian Institution, Washington, DC, The Joseph H. Hirshhorn Bequest, 1981"
+        "content": "Hirshhorn Museum and Sculpture Garden, Smithsonian Institution, Washington, DC, The Joseph H. Hirshhorn Bequest, 1981",
+        "value" : 127000
     },
     {
         "title": "Lost O",
         "thumbnail": "https://ids.si.edu/ids/deliveryService?max_w=800&id=SAAM-1991.179.16_1",
         "name": "Emerson Woelffer",
-        "content": "Gift of June Wayne"
+        "content": "Gift of June Wayne",
+        "value" : 105000
     }
 ]

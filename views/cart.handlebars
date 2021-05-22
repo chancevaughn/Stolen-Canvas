@@ -1,36 +1,20 @@
 <div class="container row">
     <div class="col s12 m8">
-        <div class="card">
-            <div class="card-image"><img class="materialboxed" src="/Images/No_Front_Flip_Big.png"></div>
-            <div class="card-content">
-                <h3>No Front Flip</h3>
-                <p>$1000</p>
-            </div>
-            <div class="card-action">
-                <a class="black-text" href="#">Delete</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-image"><img class="materialboxed" src="/Images/Sad_Times.jpeg"></div>
-            <div class="card-content">
-                <h3>Sad Times</h3>
-                <p>$1252</p>
-            </div>
-            <div class="card-action">
-                <a class="black-text" href="#">Delete</a>
-            </div>
-        </div>
+        {{#each cartProducts as |product|}}
+        {{>cartCard}}
+        {{/each}}
     </div>
     <div class="col s12 m4">
         <div class="card">
             <div class="card-content">
-                <p>Item</p>
-                <p>Item</p>
-                <p>Item</p>
-                <p class="right">Total:</p>
+                <h5>Titles In Cart</h5>
+                {{#each cartProducts as |product|}}
+                <p>{{{this.title}}}</p>
+                {{/each}}
+                <p class="right">Total: ${{calculateTotal cartProducts}}</p>
             </div>
         </div>
-        <button class="waves-effect waves-light black-text center-text tan col s12 pad no-marg">Checkout</button>
+        <button id="checkoutButton" class="waves-effect waves-light black-text center-text tan col s12 pad no-marg">Checkout</button>
     </div>
 </div>
 <script src="/js/cart.js"></script>
