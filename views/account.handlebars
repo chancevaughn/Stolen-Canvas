@@ -3,56 +3,29 @@
     <div class="col s12 l8 push-l2 card z-depth-0">
         <div class="card-title h3"> Collection</div>
         <div class="card col s12 tan">
-            <div class="col s3">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/Puddle_Wuttle.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s3">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/Images/No_Front_Flip_Big.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s3">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/assets/Images/Sisyphean.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col s3">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/assets/Images/Sad_Times.jpeg">
-                    </div>
-                </div>
-            </div>
-            <div class="col s3">
-                <div class="card">
-                    <div class="card-image gallery-lg hoverable">
-                        <img src="/assets/Images/Sad_Times.jpeg">
-                    </div>
-                </div>
-            </div>
+            {{#unless collection}}
+            <p>You have no items in your collection.</p>
+            {{/unless}}
+            {{#each collection as |Product|}}
+            {{>thumbnail}}
+            {{/each}}
         </div>
+    
         <div class="col s12 card z-depth-0 hide-on-med-and-down">
             <p class="fs-xl">Order History</p>
-            <p>Item</p>
-            <p>Item</p>
-            <p>Item</p>
+            {{!--<p>Item</p>
+        <p>Item</p>
+        <p>Item</p>--}}
         </div>
     </div>
+    
     <div class="col s8 card z-depth-0 hide-on-large-only">
         <p class="fs-xl">Order History</p>
+        {{!--<p>Item</p>
         <p>Item</p>
-        <p>Item</p>
-        <p>Item</p>
+        <p>Item</p>--}}
     </div>
-
+        
     <!--User Side-->
     <div class="col l3 s4 push-l3 card tan">
         <div class="card-image">

@@ -56,8 +56,8 @@ router.get('/login', async (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/account');
     }
-    else{
-    res.render(`login`);
+    else {
+        res.render(`login`);
     }
 })
 
@@ -65,8 +65,8 @@ router.get('/create', async (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/account')
     }
-    else{
-    res.render(`create-account`);
+    else {
+        res.render(`create-account`);
     }
 })
 
@@ -77,32 +77,53 @@ router.get('/account', async (req, res) => {
         res.redirect('/login')
     }
     else {
-        try{
-        const userData = await User.findOne({
-            where: {
-                user_id: req.session.user_id
+        try {
+            const userData = await User.findOne({
+                where: {
+                    user_id: req.session.user_id
 
-            },
+                },
 
-            attributes: { exclude: ['password, create_date, last_login'] }
-        })
+                attributes: { exclude: ['password, create_date, last_login'] }
+            })
+            const dbCollection = await Product.findAll({
+                where: {
+                    owner: userData.user_id
+                }
+            })
+            const collection = dbCollection.map((art) => art.get({plain: true}));
+            res.render(`account`, {userData: userData.get({ plain: true }), collection});
+        }
+        catch {
+            req.session.destroy(() => {
+                res.status(403).render('/login')
+            })
 
-        res.render(`account`, userData.get({ plain: true }));
-    }
-    catch {
-        req.session.destroy(() => {
-            res.status(403).render('/login')
-        })
-        
-    }
+        }
     }
 })
 
 router.get('/cart', async (req, res) => {
-    if (!req.session.logged_in) {
-        res.redirect('/login')
+    try {
+        if (!req.session.logged_in) {
+            res.redirect('/login')
+        }
+        else {
+            const dbProducts = await Product.findAll({
+                where: {
+                    incart: req.session.user_id
+                }
+            })
+            const cartProducts = dbProducts.map((art) => art.get({plain: true}));
+            console.log(cartProducts);
+            res.status(200).render('cart', {cartProducts})
+        }
     }
-    res.render(`cart`);
+    catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+
 })
 
 module.exports = router

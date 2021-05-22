@@ -33,6 +33,18 @@ Product.init(
 
         },
 
+        value: {
+            type: DataTypes.DECIMAL,
+        },
+
+        incart: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'User',
+                key: 'user_id'
+            }
+        },
+
         owner: {
             type: DataTypes.INTEGER,
             references: {
